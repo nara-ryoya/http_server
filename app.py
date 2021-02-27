@@ -42,7 +42,7 @@ class HelloServerHandler(BaseHTTPRequestHandler):
             items = str(form.getlist('sel1'))
         else:
             items = "no-item"
-        res = f"your OS: items"
+        res = f"your OS: {items}"
         self.send_response(200)
         self.end_headers()
         html = next.format(
