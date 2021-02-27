@@ -4,9 +4,6 @@
   <title>{title}</title>
   <meta charset="utf-8"/>
   <style>
-    body {{margin:10px;}}
-    h1 {{color:lightgray;font-size:36pt;}}
-    p {{font-size:16pt}}
   </style>
 </head>
 <body>
@@ -14,15 +11,16 @@
   <p>{message}</p>
   <div>
     <form method="post" action="/">
-      <select name="sel1" multiple>
-        <option>Windows</option>
-        <option>macOS</option>
-        <option>Linux</option>
-        <option>android</option>
-        <option>iOS</option>
-        <option>iPadOS</option>
-        <option>ChromeOS</option>
-      </select>
+      <input type="hidden" name="last" value="{last}">
+      <input type="hidden" name="animal" value="{animal}">
+      <div>
+        <input type="radio" id="r1" name="answer" value="{yes}">
+        <label for="r1">はい</label>
+      </div>
+      <div>
+        <input type="radio" id="r2" name="answer" value="{no}">
+        <label for="r2">いいえ</label>
+      </div>
       <input type="submit">
     </form>
   </div>>
